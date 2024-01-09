@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="Final Assignment.css">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+    </style>
+    <div class="header" id="header">
+        <div class="headerContent">
+            <h1><a href="Final Assignment.html#header" id="home"> Jess Wilkinson</a></h1>
+            <button onclick =resume() type="button" class="button">Resume</button>
+            <button onclick =portfolio() type="button" class="button">Portfolio</button>
+            <button onclick =contact() type="button" class="button">Contact</button>
+            <button onclick= css() type="button" class="button" id="CSS" href="#css">CSS</button>
+            <button onclick=js() type="button" class="button" id="JS" href="#js">JS</button>
+        </div>
+    </div>
+</head>
+
+
+<body class="margin">
+    <section id="resume">
+        <div class="resume"></div>
+            <h3 class="title" >CSS Cheat Sheet</h3>
+            <div class="resumeContents">
+            <div class="section" id="misc">
+                    <div class="resumeSection">
+                        <h3 class="redFont">Basics</h3>
+                        <p class="resumeContent"><strong>Syntax</strong><br>
+                            selector{<br>
+                            property: value;<br>
+                            property2: value2;<br>
+                            }</p>
+                        <p><strong>Include External CSS File</strong><br>
+                            &lt;link rel="stylesheet" type="text/css" href="/style.css" /&gt;<br>
+                        </p>
+                        <p><strong>Internal Styles</strong><br>
+                            &lt;style type="text/css"&gt;<br>
+                                div { color: #444;}<br>
+                                &lt;/style&gt;<br>
+                        </p>
+                        <p><strong>Inline Styles</strong><br>
+                            &lt;tag style="property: value"&gt; &lt;/tag&gt;
+                        </p>
+                        <p><strong>Clearfix</strong><br>
+                            .clearfix:after {<br>
+                                clear: both;<br>
+                                content: " ";<br>
+                                display: block;<br>
+                                font-size: 0;<br>
+                                height: 0;<br>
+                                visibility: hidden;<br>
+                                }<br>
+                                .clearfix { display: inline-block; }<br>
+                                * html .clearfix { height: 1%; }<br>
+                                .clearfix { display: block; }
+                        </p>
+                    </div>
+                    <div class="resumeSection">
+                        <h3 class="redFont">Selectors</h3>
+                        <p class="resumeContent"><strong>Basic</strong><br>
+                            * <span class="comment"> all elements</span><br>
+                            div <span class="comment">all div tags</span><br>
+                            div,p<span class="comment"> all divs and paragraphs</span><br>
+                            div p <span class="comment">paragraphs inside divs</span><br>
+                            div > p <span class="comment">all p tags, one level deep in div</span><br>
+                            div + p <span class="comment">p tags immediately after div</span><br>
+                            div ~ p <span class="comment">p tags preceded by div</span><br>
+                            .classname <span class="comment">all elements with class</span><br>
+                            #idname <span class="comment">element with ID</span><br>
+                            div.classname <span class="comment">divs with certain classname</span><br>
+                            div#idname <span class="comment">div with certain ID</span><br>
+                            #idname * <span class="comment">all elements inside #idname</span></p>
+                            <p><strong>Pseudo Classes</strong><br>         
+                            a:link <span class="comment">link in normal state</span><br>
+                            a:active <span class="comment">link in clicked state</span><br>
+                            a:hover<span class="comment"> link with mouse over it</span><br>
+                            a:visited <span class="comment">visited link</span><br>
+                            p::after{content:"yo";}<span class="comment">add content after p</span><br>
+                            p::before <span class="comment">add content before p</span><br>
+                            input:checked <span class="comment">checked inputs</span><br>
+                            input:disabled <span class="comment">disabled inputs</span><br>
+                            input:enabled <span class="comment">enabled inputs</span><br>
+                            input:focus <span class="comment">input has focus</span><br>
+                            input:in-range <span class="comment">value in range</span><br>
+                            input:out-of-range <span class="comment">input value out of range</span><br>
+                            input:valid <span class="comment">input with valid value</span><br>
+                            input:invalid <span class="comment">input with invalid value</span><br>
+                            input:optional <span class="comment">no required attribute</span><br>
+                            input:required <span class="comment">input with requred attribute</span><br>
+                            input:read-only <span class="comment">with readonly attribute</span><br>
+                            input:read-write <span class="comment">no readonly attribute</span><br>
+                            div:empty <span class="comment">element with no children</span><br>
+                            p::first-letter <span class="comment">first letter in p</span><br>
+                            p::first-line <span class="comment">first line in p</span><br>
+                            p:first-of-type <span class="comment">first of some type</span><br>
+                            p:last-of-type <span class="comment">last of some type</span><br>
+                            p:lang(en) <span class="comment">p with en language attribute</span><br>
+                            :not(span) <span class="comment">element that's not a span</span><br>
+                            p:first-child <span class="comment">first child of its parent</span><br>
+                            p:last-child <span class="comment">last child of its parent</span><br>
+                            p:nth-child(2) <span class="comment">second child of its parent</span><br>
+                            p:nth-child(3n+1) <span class="comment">nth-child (an + b) formula</span><br>
+                            p:nth-last-child(2) <span class="comment">second child from behind</span><br>
+                            p:nth-of-type(2) <span class="comment">second p of its parent</span><br>
+                            p:nth-last-of-type(2) <span class="comment">...from behind</span><br>
+                            p:only-of-type <span class="comment">unique of its parent</span><br>
+                            p:only-child <span class="comment">only child of its parent</span><br>
+                            :root <span class="comment">documents root element</span><br>
+                            ::selection <span class="comment">portion selected by user</span><br>
+                            :target <span class="comment">highlight active anchor</span></p>
+                            <p><strong>Attribute Selectors</strong><br>
+                                a[target] <span class="comment">links with a target attribute</span><br>
+                                a[target="_blank"] <span class="comment">links which open in new tab</span><br>
+                                [title~="chair"] <span class="comment">title element containing a word</span><br>
+                                [class^="chair"] <span class="comment">class starts with chair</span><br>
+                                [class|="chair"] <span class="comment">class starts with the chair word</span><br>
+                                [class*="chair"] <span class="comment">class contains chair</span><br>
+                                [class$="chair"] <span class="comment">class ends with chair</span><br>
+                                input[type="button"] <span class="comment">specified input type</span></p>
+                    </div>
+                    <div class="resumeSection">
+                        <h3 class="redFont">Media Queries</h3>
+                        <p class="resumeContent"><strong>Syntax</strong><br>
+                            @media not|only mediatype and (media feature) {<br>
+                                CSS Code }<br>
+                                Link external file:<br>
+                                &lt;link rel="stylesheet" media=mediatype and|not|only (media feature href="mystylesheet.css"&gt;</p>
+                        <p><strong>Viewport is 480 Pixels or Smaller</strong><br>
+                            @media screen and (max-width: 480px) { }</p>
+                        <p><strong>Viewport Width Smaller OR Height Smaller</strong><br>
+                            @media screen and (max-width: 600px), (max-height: 500px) {}</p>
+                        <p><strong>Print Style</strong><br>
+                            @media print { ... }</p>
+                        <p><strong>Night/Dark Mode</strong><br>
+                            @media (prefers-color-scheme: dark) { ... }</p>
+                        <p><strong>Media Types</strong><br>
+                            all, print, screen, speech</p>
+                        <p><strong>Media Features</strong><br>
+                            width <span class="comment"> viewport width</span><br>
+                            height <span class="comment"> viewport height</span><br>
+                            orientation <span class="comment"> orientation of the viewport</span><br>
+                            aspect-ratio <span class="comment"> ratio between width & height</span><br>
+                            color <span class="comment"> number of bits per color</span><br>
+                            color-index <span class="comment"> number of displayable colors</span><br>
+                            monochrome <span class="comment"> color on greyscale device</span><br>
+                            resolution <span class="comment"> resolution of the device</span><br>
+                            scan <span class="comment"> scanning process of the device</span><br>
+                            grid <span class="comment"> device is a grid or bitmap</span></p>
+                    </div>
+            </div>
+            <div class="section" id="experience">
+                <div class="resumeSection">
+                    <h3 class="redFont">Properties</h3>
+                    <p class="resumeContent">
+                        align-content <span class="comment">behavior of the flex-wrap property</span><br>
+                        align-items <span class="comment">alignment for items inside the container</span><br>
+                        align-self <span class="comment">alignment for the selected item</span><br>
+                        all <span class="comment">changes all properties</span><br>
+                        animation <span class="comment">binds an animation to an element</span><br>
+                        animation-delay <span class="comment">delays animation start</span><br>
+                        animation-direction <span class="comment">reverse animation or in alternate cycles</span><br>
+                        animation-duration <span class="comment">animation duration in seconds or ms</span><br>
+                        animation-fill-mode <span class="comment">style when the animation is not playing</span><br>
+                        animation-iteration-count <span class="comment">number of an animation replays</span><br>
+                        animation-name <span class="comment">name for the @keyframes animation</span><br>
+                        animation-play-state <span class="comment">the animation is running or paused</span><br>
+                        animation-timing-function <span class="comment">speed curve of an animation</span><br>
+                        backface-visibility <span class="comment">is element visible when not facing the screen</span><br>
+                        background <span class="comment">all background properties in one declaration</span><br>
+                        background-attachment <span class="comment">is the background image fixed or scrolls</span><br>
+                        background-blend-mode <span class="comment">blending mode of each background layer</span><br>
+                        background-clip <span class="comment">painting area of the background</span><br>
+                        background-color <span class="comment">background color</span><br>
+                        background-image <span class="comment">background image</span><br>
+                        background-origin <span class="comment">where the background image is positioned</span><br>
+                        background-position <span class="comment">starting position of the background image</span><br>
+                        background-repeat <span class="comment">the way the background image is repeated</span><br>
+                        background-size <span class="comment">background image size</span><br>
+                        border <span class="comment">sets all border properties in one line</span><br>
+                        border-bottom <span class="comment">bottom border properties in one line</span><br>
+                        border-bottom-color <span class="comment">color of the bottom border</span><br>
+                        border-bottom-left-radius <span class="comment">border bottom left radius</span><br>
+                        border-bottom-right-radius <span class="comment">border bottom right radius</span><br>
+                        border-bottom-style <span class="comment">border bottom style</span><br>
+                        border-bottom-width <span class="comment">border bottom width</span><br>
+                        border-collapse <span class="comment">border collapse</span><br>
+                        border-color <span class="comment">border color</span><br>
+                        border-image <span class="comment">sets an image as border</span><br>
+                        border-image-outset <span class="comment">border image area extends beyond the border box</span><br>
+                        border-image-repeat <span class="comment">border image repeated, rounded or stretched</span><br>
+                        border-image-slice <span class="comment">how to slice the border image</span><br>
+                        border-image-source <span class="comment">path to the border image</span><br>
+                        border-image-width <span class="comment">border image width</span><br>
+                        border-left <span class="comment">left border properties in one line</span><br>
+                        border-left-color <span class="comment">border left color</span><br>
+                        border-left-style <span class="comment">border left style</span><br>
+                        border-left-width <span class="comment">border left width</span><br>
+                        border-radius <span class="comment">border radius of the four rounded corners</span><br>
+                        border-right <span class="comment">right border properties in one line</span><br>
+                        border-right-color <span class="comment">border right color</span><br>
+                        border-right-style <span class="comment">border right style</span><br>
+                        border-right-width <span class="comment">border right width</span><br>
+                        border-spacing <span class="comment">border spacing</span><br>
+                        border-style <span class="comment">border style</span><br>
+                        border-top <span class="comment">top border properties in one line</span><br>
+                        border-top-color <span class="comment">border top color</span><br>
+                        border-top-left-radius <span class="comment">border top left radius</span><br>
+                        border-top-right-radius <span class="comment">border top right radius</span><br>
+                        border-top-style <span class="comment">border top style</span><br>
+                        border-top-width <span class="comment">border top width</span><br>
+                        border-width <span class="comment">border width</span><br>
+                        bottom <span class="comment">bottom offset for relative and absolute elements</span><br>
+                        box-shadow <span class="comment">shadow to element</span><br>
+                        box-sizing <span class="comment">box sizing properties</span><br>
+                        caption-side <span class="comment">placement of a table caption</span><br>
+                        clear <span class="comment">deny floating of an element</span><br>
+                        clip <span class="comment">clip an absolutely positioned element</span><br>
+                        color <span class="comment">text color</span><br>
+                        column-count <span class="comment">divide the content in columns</span><br>
+                        column-fill <span class="comment">balanced fill or not</span><br>
+                        column-gap <span class="comment">gap between the columns</span><br>
+                        column-rule <span class="comment">separator between columns, like border</span><br>
+                        column-rule-color <span class="comment">column rule color</span><br>
+                        column-rule-style <span class="comment">column rule style</span><br>
+                        column-rule-width <span class="comment">column rule width</span><br>
+                        column-span <span class="comment">column span</span><br>
+                        column-width <span class="comment">column width</span><br>
+                        columns <span class="comment">set column-width and column-count</span><br>
+                        content <span class="comment">insert content :before and :after elements</span><br>
+                        counter-increment <span class="comment">count sections</span><br>
+                        counter-reset <span class="comment">reset counter</span><br>
+                        cursor <span class="comment">cursor type when element is hovered</span><br>
+                        direction <span class="comment">writing direction, Arabic is using rtl</span><br>
+                        display <span class="comment">box display type</span><br>
+                        empty-cells <span class="comment">hide borders and background on empty table cells</span><br>
+                        filter <span class="comment">image effects: grayscale, blur, invert etc.</span><br>
+                        flex <span class="comment">item length, relative to others inside the container</span><br>
+                        flex-basis <span class="comment">initial length of a flexible item</span><br>
+                        flex-direction <span class="comment">direction of the flexible items</span><br>
+                        flex-flow <span class="comment">shorthand for flex-direction and flex-wrap</span><br>
+                        flex-grow <span class="comment">how much the item will grow relative other items</span><br>
+                        flex-shrink <span class="comment">how to shrink the item relative to other items</span><br>
+                        flex-wrap <span class="comment">wrap flexible items</span><br>
+                        float <span class="comment">float elements left or right</span><br>
+                        font <span class="comment">all font properties in one line</span><br>
+                        @font-face <span class="comment">declare non-web-safe fonts</span><br>
+                        font-family <span class="comment">font of the element</span><br>
+                        font-size <span class="comment">font size</span><br>
+                        font-size-adjust <span class="comment">control font size if the first declared option is not available</span><br>
+                        font-stretch <span class="comment">widen or narrow text</span><br>
+                        font-style <span class="comment">font style: normal, italic, oblique</span><br>
+                        font-variant <span class="comment">set small-caps</span><br>
+                        font-weight <span class="comment">use bold or thin characters</span><br>
+                        hanging-punctuation <span class="comment">can a punctuation mark be placed outside the line box?</span><br>
+                        height <span class="comment">height of the element</span><br>
+                        justify-content <span class="comment">justifies flexible container's items horizontally if necessary</span><br>
+                        @keyframes <span class="comment">specifies the animation code</span><br>
+                        left <span class="comment">left offset for relative and absolute elements</span><br>
+                        letter-spacing <span class="comment">space between characters</span><br>
+                        line-height <span class="comment">line height of text or inline-block elements</span><br>
+                        list-style <span class="comment">all list properties in one line</span><br>
+                        list-style-image <span class="comment">replace the list item marker with an image</span><br>
+                        list-style-position <span class="comment">list item markers inside or outside the content flow</span><br>
+                        list-style-type <span class="comment">set the type of the list item marker</span><br>
+                        margin <span class="comment">set the top, right, bottom and left margins in one line</span><br>
+                        margin-bottom <span class="comment">bottom margin</span><br>
+                        margin-left <span class="comment">left margin</span><br>
+                        margin-right <span class="comment">right margin</span><br>
+                        margin-top <span class="comment">margin top</span><br>
+                        max-height <span class="comment">maximum height of element</span><br>
+                        max-width <span class="comment">maximum width of element</span><br>
+                        @media <span class="comment">see media queries</span><br>
+                        min-height <span class="comment">minimum height</span><br>
+                        min-width <span class="comment">minimum width</span><br>
+                        nav-down <span class="comment">where to navigate when the the arrow-down button is pressed</span><br>
+                        nav-index <span class="comment">sets sequential navigation order</span><br>
+                        nav-left <span class="comment">where to navigate when the the arrow-left button is pressed</span><br>
+                        nav-right <span class="comment">where to navigate when the the arrow-right button is pressed</span><br>
+                        nav-up <span class="comment">where to navigate when the the arrow-up button is pressed</span><br>
+                        opacity <span class="comment">transparency level of an element</span><br>
+                        order <span class="comment">reorder elements in a container</span><br>
+                        outline <span class="comment">draw an outer border around elements</span><br>
+                        outline-color <span class="comment">outline color</span><br>
+                        outline-offset <span class="comment">gap between the element and the outline</span><br>
+                        outline-style <span class="comment">outline style</span><br>
+                        outline-width <span class="comment">outline width</span><br>
+                        overflow <span class="comment">hide, display or scroll if the content overflows its container</span><br>
+                        overflow-x <span class="comment">horizontal overflow</span><br>
+                        overflow-y <span class="comment">vertical overflow</span><br>
+                        padding <span class="comment">padding between the element border and content</span><br>
+                        padding-bottom <span class="comment">padding bottom</span><br>
+                        padding-left <span class="comment">padding left</span><br>
+                        padding-right <span class="comment">padding right</span><br>
+                        padding-top <span class="comment">padding top</span><br>
+                        page-break-after <span class="comment">adds page break after an element</span><br>
+                        page-break-before <span class="comment">adds page break before an element</span><br>
+                        page-break-inside <span class="comment">allow page break inside an element</span><br>
+                        perspective <span class="comment">how many pixels the 3D element is placed from the view</span><br>
+                        perspective-origin <span class="comment">where is the 3D element based in the x- and y-axis</span><br>
+                        position <span class="comment">positioning type: absolute, fixed, relative, static</span><br>
+                        quotes <span class="comment">set quotation marks to wrap an element</span><br>
+                        resize <span class="comment">declare resizable elements</span><br>
+                        right <span class="comment">right offset for relative and absolute elements</span><br>
+                        tab-size <span class="comment">tab character space length</span><br>
+                        table-layou <span class="comment">ttable layout algorithm</span><br>
+                        text-align <span class="comment">horizontal alignment of text</span><br>
+                        text-align-last <span class="comment">horizontal alignment of last line of text</span><br>
+                        text-decoration <span class="comment">overline, underline or line-through the text</span><br>
+                        text-indent <span class="comment">indentation of the first line of the text</span><br>
+                        text-overflow <span class="comment">the way how overflowed content is marked (ellipsis)</span><br>
+                        text-shadow <span class="comment">text shadow</span><br>
+                        text-transform <span class="comment">capitalization of text</span><br>
+                        top <span class="comment">top offset for relative and absolute elements</span><br>
+                        transform <span class="comment">2D 3D transformation</span><br>
+                        transform-origin <span class="comment">changes the position of transformed elements</span><br>
+                        transform-style <span class="comment">render nested elements in 3D</span><br>
+                        transition <span class="comment">transition properties in one line</span><br>
+                        transition-delay <span class="comment">delay before transition effect start</span><br>
+                        transition-duration <span class="comment">transition effect duration</span><br>
+                        transition-property <span class="comment">which CSS property is the transition affecting</span><br>
+                        transition-timing-function <span class="comment">speed curve of the transition</span><br>
+                        unicode-bidi <span class="comment">should the text be overridden to support more languages</span><br>
+                        user-select <span class="comment">disable user content selection</span><br>
+                        vertical-align <span class="comment">vertical alignment</span><br>
+                        visibility <span class="comment">visibility:hidden elements leave a gap</span><br>
+                        white-space <span class="comment">how are white-spaces handled</span><br>
+                        width <span class="comment">width of an element</span><br>
+                        word-break <span class="comment">text breaking rules when text reaches the end of the container</span><br>
+                        word-spacing <span class="comment">size of white space between words</span><br>
+                        word-wrap <span class="comment">break long words and wrap onto the next line</span><br>
+                        z-index <span class="comment">stack order of the element</span></p>
+                    </div> 
+                </div>
+            </div>
+    </div>
+</section>
+</body>
+
+
+<footer id="contact">
+    <div class="contactColour">
+    <div class="contact">
+        <h3 class="title" style="color:white">Contact</h3>
+        <div class="contactContents">
+            <div class="section">
+                    <form action="mailto:j.wilkinson419@mybvc.ca" name="contactForm" id="form">
+                        <div class="contactInput">
+                            <input type="text" class="input" id="name" name="name" placeholder="Name">
+                            <input type="text" class="input" id="email" name="email" placeholder="Email address">
+                        </div>
+                        <div class="messageInput">
+                            <textarea  class="message" id="message" name="message" placeholder="Message..."></textarea>
+                            <button type="submit" class="button" id="send">Send</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</footer>
+<script src="Final Assignment.js"></script>
+</html>

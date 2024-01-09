@@ -1,0 +1,275 @@
+*{
+    font-family:'Poppins', sans-serif;
+    box-sizing:border-box;
+}
+
+.margin{
+    margin:0px;
+}
+
+.header{
+    height:300px;
+    background: #c8d7f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerContent{
+    text-align:center;
+}
+
+a#home{
+    color:black;
+    text-decoration:none;
+}
+
+a#home:hover{
+    color:red;
+}
+
+h1{
+    font-weight:600;
+}
+
+h4{
+    padding-bottom:0px;
+    margin-bottom:0px;
+    font-weight:700;
+}
+
+h5{
+    font-size:small;
+    padding:0px;
+    margin:0px;
+    font-weight:400;
+}
+
+.small{
+    font-size:smaller;
+}
+
+button{
+    width:100px;
+    background: #c8d7f5;
+    border-radius:20px;
+    border: 1px black solid;
+    padding:5px 20px;
+    margin:20px;
+    font-weight:800;
+}
+
+button:hover{
+    background:white;
+}
+
+.section{
+    width:100%;
+    margin:65px;
+    margin-top:25px;
+    height:auto;
+    flex: 1 1 0px;
+}
+
+.title{
+    margin:65px;
+    margin-bottom:0px;
+    font-weight:light;
+    font-style:italic;
+}
+
+.resume{
+    padding-top:12px;
+    display:flex;
+    width:100%;
+}
+
+.resumeSection{
+    margin-bottom:25px;
+    font-size:small;
+}
+
+.redFont{
+    color: red;
+    font-weight:800;
+    font-size:large;
+}
+
+.resumeContents{
+    display:flex;
+    margin-top:25px;
+}
+
+.resumeContent{
+    margin-top:-10px;
+}
+
+li{
+    margin-left:-28px;
+    padding:0px;
+    text-indent: 15px;
+}
+
+.portfolio{
+    padding-top:12px;
+    display:flex;
+    width:100%;
+}
+
+.portfolioColour{
+    background: #f2f2f2;
+}
+
+.portfolioContents{
+    margin-top:25px;
+    display:flex;
+    width:100%;
+}
+
+.carousel{
+    display:relative;
+    width:100%;
+    margin:auto;
+    margin-top:15px;
+}
+
+.slide{
+    display:none;
+    width:100%;
+}
+
+.project{
+    display:flex;
+    align-items:top;
+    width:100%;
+    margin:0px;
+    padding:0px;
+    justify-content: space-between;
+}
+
+.projectInfo{
+    display:block;
+    font-size:small;
+    width:90%;
+}
+
+video{
+    padding-right:20px;
+    width:100%;
+}
+
+img{
+    padding-right:20px;
+    width:100%;
+}
+
+#video{
+    width:100%;
+}
+
+a{
+    padding:15px;
+    user-select: none;
+}
+
+a:hover{
+    color:red;
+    cursor:default;
+}
+
+.projectTitle{
+    margin-bottom:0;
+    font-size:large;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+.contactColour{
+    background:black;
+}
+
+.contact{
+    display:block;
+    padding-top:12px;
+}
+
+.contactContents{
+    display:flex;
+    margin-top:15px;
+}
+
+form{
+    width:100%;
+    text-align: center;
+    display:flex;
+    padding:15px;
+    vertical-align: top;
+}
+
+.contactInput{
+    display:block;
+    width:100%;
+    margin-right:15px;
+    margin-left:-15px;
+}
+
+.input{
+    width:100%;
+    color:rgb(118, 118, 118);
+    font-family: 'Poppins', sans-serif;
+    text-indent: 12px;
+    background:#333333;
+    margin-bottom:12px;
+    height:30px;
+    display:block;
+    border:none;
+    outline:none;
+}
+
+.messageInput{
+    display:block;
+    width:100%;
+    margin-left:15px;
+    margin-right:-15px;
+}
+
+.message{
+    color:rgb(118, 118, 118);
+    font-family: 'Poppins', sans-serif;
+    padding:6px 12px;
+    height:100px;
+    resize:none;
+    width:100%;
+    border:none;
+    outline:none;
+}
+
+#send{
+    float:left;
+    background:black;
+    border: 1px white solid;
+    color:white;
+    margin-left:0px;
+    padding:5px 12px;
+}
+
+#send:hover{
+    background:red;
+}
+
+.comment{
+    color:red;
+}

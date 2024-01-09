@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="Final Assignment.css">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+    </style>
+    <div class="header" id="header">
+        <div class="headerContent">
+            <h1><a href="Final Assignment.html#header" id="home"> Jess Wilkinson</a></h1>
+            <button onclick =resume() type="button" class="button">Resume</button>
+            <button onclick =portfolio() type="button" class="button">Portfolio</button>
+            <button onclick =contact() type="button" class="button">Contact</button>
+            <button onclick= css() type="button" class="button" id="CSS" href="#css">CSS</button>
+            <button onclick=js() type="button" class="button" id="JS" href="#js">JS</button>
+        </div>
+    </div>
+</head>
+
+
+<body class="margin">
+    <section id="resume">
+        <div class="resume"></div>
+            <h3 class="title" >JavaScript Cheat Sheet</h3>
+            <div class="resumeContents">
+            <div class="section" id="misc">
+                    <div class="resumeSection">
+                        <h3 class="redFont">Basics</h3>
+                        <p class="resumeContent"><strong>On page script:</strong><br>
+                            &lt;script type="text/javascript"&gt;  ... &lt;script&gt;</p>
+                            <p><strong>On page script:</strong><br>
+                            &lt;src="filename.js"&gt;  ... &lt;script&gt;</p>
+                            <p><strong>Functions</strong><br>
+                            function addNumbers(a, b){<br>
+                                return a+b;<br>
+                            }<br>
+                            x = assNumbers(1, 2);</p>
+                            <p><strong>Edit DOM Element</strong><br>
+                            document.getElementById("elementID").innerHTML = "Hello World!";</p>
+                            <p><strong>Output</strong><br>
+                            console.log(a);                     <span class="comment"> // write to the browser console</span><br>
+                            document.write(a);             <span class="comment"> // write to the HTML</span><br>
+                            alert(a);                              <span class="comment"> // output in an alert box</span><br>
+                            confirm("Really?");             <span class="comment">// yes/no dialog, returns true/false depending on user click</span><br>
+                            prompt("Your age?","0");  <span class="comment">// input dialog. Second argument is the initial value</span></p>
+                            <p><strong>Comments</strong><br>
+                            /* Multi line<br>
+                            comment */<br>
+                            // One line</p>
+                    </div>
+                    <div class="resumeSection">
+                        <h3 class="redFont">Variables</h3>
+                        <p class="resumeContent"><strong>Basic</strong><br>
+                            var a; <span class="comment">          // variable</span><br>
+                            var b = "init"; // string<br>
+                            var c = "Hi" + " " + "Joe";   <span class="comment">  // = "Hi Joe"</span><br>
+                            var d = 1 + 2 + "3";        <span class="comment">  // = "33"</span><br>
+                            var e = [2,3,5,8];          <span class="comment">   // array</span><br>
+                            var f = false;               <span class="comment">   // boolean</span><br>
+                            var g = /()/;                <span class="comment">   // RegEx</span><br>
+                            var h = function(){};      <span class="comment">     // function object</span><br>
+                            const PI = 3.14;          <span class="comment">      // constant</span><br>
+                            var a = 1, b = 2, c = a + b;   <span class="comment"> // one line</span><br>
+                            let z = 'zzz';              <span class="comment">    // block scope local</span></p>
+                        <p><strong>Arithmetic</strong><br>
+                            a * (b + c)  <span class="comment">       // grouping</span><br>
+                            person.age       <span class="comment">  // member</span><br>
+                            person[age]   <span class="comment">      // member</span><br>
+                            !(a == b)    <span class="comment">     // logical not</span><br>
+                            a != b       <span class="comment">       // not equal</span><br>
+                            typeof a      <span class="comment">      // type (number, object, function...)</span><br>
+                            x << 2  x >> 3   <span class="comment">  // minary shifting</span><br>
+                            a = b       <span class="comment">        // assignment</span><br>
+                            a == b    <span class="comment">          // equals</span><br>
+                            a != b        <span class="comment">    // unequal</span><br>
+                            a === b      <span class="comment">       // strict equal</span><br>
+                            a !== b        <span class="comment">    // strict unequal</span><br>
+                            a < b   a > b   <span class="comment">    // less and greater than</span><br>
+                            a <= b  a >= b    <span class="comment">  // less or equal, greater or eq</span><br>
+                            a += b       <span class="comment">       // a = a + b (works with - * %...)</span><br>
+                            a && b      <span class="comment">        // logical and</span><br>
+                            a || b         <span class="comment">    // logical or</span></p>
+                    </div>
+                    <div class="resumeSection">
+                        <h3 class="redFont">Data Types</h3>
+                        <p class="resumeContent"><strong>Basic</strong><br>
+                            var age = 18;         <span class="comment">                  // number </span><br>
+                            var name = "Jane";        <span class="comment">             // string</span><br>
+                            var name = {first:"Jane", last:"Doe"}; <span class="comment"> // object</span><br>
+                            var truth = false;           <span class="comment">          // boolean</span><br>
+                            var sheets = ["HTML","CSS","JS"];    <span class="comment">   // array</span><br>
+                            var a; typeof a;             <span class="comment">          // undefined</span><br>
+                            var a = null;                  <span class="comment">        // value null</span></p>
+                            <p><strong>Objects</strong><br>
+                            var student = {            <span class="comment">   // object name</span><br>
+                            firstName:"Jane",       <span class="comment">    // list of properties and values</span><br>
+                            lastName:"Doe",<br>
+                            age:18,<br>
+                            height:170,<br>
+                            fullName : function() {   <span class="comment">  // object function</span><br>
+                               return this.firstName + " " + this.lastName;<br>
+                            }<br>
+                            }; <br>
+                            student.age = 19;       <span class="comment">   // setting value</span><br>
+                            student[age]++;         <span class="comment">    // incrementing</span><br>
+                            name = student.fullName();  <span class="comment">// call object function</span></p>
+                    </div>
+            </div>
+            <div class="section" id="experience">
+                <div class="resumeSection">
+                    <h3 class="redFont">Arrays</h3>
+                    <p class="resumeContent"><strong>Format</strong><br>
+                        var dogs = ["Bulldog", "Beagle", "Labrador"]; <br>
+var dogs = new Array("Bulldog", "Beagle", "Labrador"); <span class="comment"> // declaration</span>  <br>
+<br>
+alert(dogs[1]);         <span class="comment">  // access value at index, first item being [0]</span>  <br>
+dogs[0] = "Bull Terier";    // change the first item<br>
+<br>
+for (var i = 0; i < dogs.length; i++) {   <span class="comment">  // parsing with array.length</span>  <br>
+console.log(dogs[i]);<br>
+}</p>
+                </div>
+                <div class="resumeSection">
+                    <h3 class="redFont">If Else</h3>
+                    <p class="resumeContent"><strong>Format</strong><br>
+                        if ((age >= 14) && (age < 19)) {     <span class="comment">  // logical condition</span><br>
+                            status = "Eligible.";          <span class="comment">    // executed if condition is true</span><br>
+                            } else {                            <span class="comment">  // else block is optional</span><br>
+                            status = "Not eligible.";   <span class="comment">      // executed if condition is false</span><br>
+                            }<br></p>
+                    <p><strong>Switch Statement</strong><br>
+                    switch (new Date().getDay()) {   <span class="comment">   // input is current day</span><br>
+                        case 6:                  <span class="comment">      // if (day == 6)</span><br>
+                            text = "Saturday";         <br> 
+                            break;<br>
+                        case 0:                    <span class="comment">     // if (day == 0)</span><br>
+                            text = "Sunday";<br>
+                            break;<br>
+                        default:                   <span class="comment">    // else...</span><br>
+                            text = "Whatever";<br>
+                        } </p>
+                        </div>
+                        <div class="resumeSection">
+                            <h3 class="redFont">Loops</h3>
+                            <p class="resumeContent"><strong>For Loop</strong><br>
+                                for (var i = 0; i < 10; i++) {
+                                    document.write(i + ": " + i*3 + "<br />");<br>
+                                    }<br>
+                                    var sum = 0;<br>
+                                    for (var i = 0; i < a.length; i++) {<br>
+                                    sum + = a[i];<br>
+                                    }             <span class="comment">  // parsing an array</span><br>
+                                    html = "";<br>
+                                    for (var i of custOrder) {<br>
+                                    html += "<li>" + i + "</li>";<br>
+                                    }</p>
+                            
+                            <p><strong>While Loop</strong><br>
+                            var i = 1;                 <span class="comment">   // initialize</span><br>
+                            while (i < 100) {       <span class="comment">      // enters the cycle if statement is true</span><br>
+                            i *= 2;                 <span class="comment">    // increment to avoid infinite loop</span><br>
+                            document.write(i + ", "); <span class="comment">// output</span><br>
+                            }</p>
+                            <p><strong>Do While Loop</strong><br>
+                                var i = 1;                 <span class="comment">    // initialize</span><br>
+                                do {                      <span class="comment">      // enters cycle at least once</span><br>
+                                i *= 2;               <span class="comment">      // increment to avoid infinite loop</span><br>
+                                document.write(i + ", ");  <span class="comment"> // output</span><br>
+                                } while (i < 100)          <span class="comment">   // repeats cycle if statement is true at the end</span><br>
+                                </p>
+                                <p><strong>Break</strong><br>
+                                    for (var i = 0; i < 10; i++) {<br>
+                                        if (i == 5) { break; }      <span class="comment">  // stops and exits the cycle</span><br>
+                                        document.write(i + ", ");    <span class="comment">   // last output number is 4</span><br>
+                                        }
+                                    </p>
+                                    <p><strong>Continue</strong><br>
+                                        for (var i = 0; i < 10; i++) {<br>
+                                            if (i == 5) { continue; }    <span class="comment">   // skips the rest of the cycle</span><br>
+                                            document.write(i + ", ");    <span class="comment">   // skips 5</span><br>
+                                            }
+                             </p>  
+                </div>
+            </div>
+    </div>
+</section>
+</body>
+
+
+<footer id="contact">
+    <div class="contactColour">
+    <div class="contact">
+        <h3 class="title" style="color:white">Contact</h3>
+        <div class="contactContents">
+            <div class="section">
+                    <form action="mailto:j.wilkinson419@mybvc.ca" name="contactForm" id="form">
+                        <div class="contactInput">
+                            <input type="text" class="input" id="name" name="name" placeholder="Name">
+                            <input type="text" class="input" id="email" name="email" placeholder="Email address">
+                        </div>
+                        <div class="messageInput">
+                            <textarea  class="message" id="message" name="message" placeholder="Message..."></textarea>
+                            <button type="submit" class="button" id="send">Send</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</footer>
+<script src="Final Assignment.js"></script>
+</html>
