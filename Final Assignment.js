@@ -62,15 +62,15 @@ function currentSlide(n) {
   }
 
   function resume() {
-    window.location = "Final Assignment.html?scroll=resume";
+    window.location = "index.html?scroll=resume";
   }
   
   function portfolio() {
-    window.location = "Final Assignment.html?scroll=portfolio";
+    window.location = "index.html?scroll=portfolio";
   }
   
   function contact() {
-    window.location = "Final Assignment.html?scroll=contact";
+    window.location = "index.html?scroll=contact";
   }
   
 
